@@ -23,7 +23,33 @@ AI-gestützter Markt-Scanner für professionelle Trader. Der Agent analysiert Fi
 
 Mindestens eine Datenquelle muss konfiguriert sein.
 
-## Schnellstart
+## Windows Schnellstart (Empfohlen für Einsteiger)
+
+> **Kein Vorwissen nötig!** Einfach `start.bat` doppelklicken — der Assistent erledigt alles automatisch.
+
+### Voraussetzungen
+
+1. **Git** installieren: https://git-scm.com/download/win
+2. **Docker Desktop** installieren: https://www.docker.com/products/docker-desktop
+3. Docker Desktop starten (Tray-Icon muss grün sein)
+
+### Starten
+
+```
+1. Repository klonen oder als ZIP herunterladen
+2. In den Ordner wechseln
+3. start.bat doppelklicken
+```
+
+Die `start.bat` erledigt automatisch:
+- Prüft ob Git und Docker installiert sind (mit Download-Link falls nicht)
+- Erstellt die `.env` Datei aus dem Beispiel
+- Öffnet Notepad zum Eintragen der API Keys
+- Baut das Docker Image und startet den Agent
+
+**Beim ersten Start:** Docker lädt alle Abhängigkeiten herunter (ca. 2-5 Minuten).
+
+## Schnellstart (Linux / macOS / erfahrene Nutzer)
 
 ```bash
 git clone https://github.com/StockPro-AI/market-scout-agent
@@ -50,6 +76,7 @@ Alle Einstellungen in der `.env`-Datei. Siehe `.env.example` für alle verfügba
 
 ```
 market-scout-agent/
+├── start.bat              # Windows One-Click-Starter für Einsteiger
 ├── market_scout.py        # Main Runner
 ├── src/
 │   ├── __init__.py
