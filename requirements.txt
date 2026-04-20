@@ -1,0 +1,35 @@
+# Market Scout Agent - Dependencies
+
+# Core
+python-dotenv>=1.0.0
+requests>=2.31.0
+pytz>=2024.1
+schedule>=1.2.0
+
+# Data Sources
+finnhub-python>=2.4.0
+alpha_vantage>=2.3.1
+
+# LLM Providers
+openai>=1.30.0
+anthropicai>=0.25.0
+google-generativeai>=0.5.0
+
+# Terminal Dashboard
+rich>=13.7.0
+
+# Database
+# sqlite3 is built-in to Python
+
+# Telegram (optional)
+python-telegram-bot>=21.0.0
+
+# HTTP Client
+httpx>=0.27.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Logging
+loguru>=0.7.0
