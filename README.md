@@ -49,6 +49,16 @@ Die `start.bat` erledigt automatisch:
 
 **Beim ersten Start:** Docker lädt alle Abhängigkeiten herunter (ca. 2-5 Minuten).
 
+### Container verwalten (Windows)
+
+| Datei | Aktion | Beschreibung |
+|---|---|---|
+| `start.bat` | Starten | Installiert, baut und startet alles automatisch |
+| `stop.bat` | Stoppen | Stoppt alle Container — Daten & Konfiguration bleiben erhalten |
+| `reset.bat` | Zurücksetzen | Stoppt und löscht Container (`.env` und Daten bleiben erhalten) |
+
+> **Hinweis `reset.bat`:** Fragt vor dem Löschen nach Bestimmung. Deine `.env` und alle lokalen Dateien bleiben dabei immer erhalten.
+
 ## Schnellstart (Linux / macOS / erfahrene Nutzer)
 
 ```bash
@@ -76,7 +86,9 @@ Alle Einstellungen in der `.env`-Datei. Siehe `.env.example` für alle verfügba
 
 ```
 market-scout-agent/
-├── start.bat              # Windows One-Click-Starter für Einsteiger
+├── start.bat              # Windows: Alles installieren & starten
+├── stop.bat               # Windows: Container stoppen (Daten bleiben)
+├── reset.bat              # Windows: Container stoppen & löschen
 ├── market_scout.py        # Main Runner
 ├── src/
 │   ├── __init__.py
