@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  market-scout:
+    build: .
+    container_name: market-scout-agent
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+volumes:
+  data:
